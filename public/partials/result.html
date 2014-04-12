@@ -1,0 +1,26 @@
+<div ng-if="isError">
+    <pre>An error occurred while searching for '{{ searchQ }}'</pre>
+</div>
+<div ng-if="siteData != null">
+    <div>search results: {{ siteData.Title }}</div>
+    <h3>Similar Sites:</h3>
+
+    <div class="row">
+        <div ng-repeat="item in siteData.SimilarSites | limitTo : showAll ? siteData.SimilarSites.length : MAX_ITEMS">
+            <div class="similar-site-link col-md-3">
+                <img ng-src="{{ item.FavIcon }}"/>
+                <a ng-href="http://{{ item.Url }}" target="_blank" data-toggle="tooltip" data-placement="top"
+                   title="{{ item.Url }}">{{ item.Url }}</a>
+            </div>
+        </div>
+        <div ng-show="!showAll">
+            <div class="col-md-12">
+                <button id="show-all-link" type="button" class="btn btn-link" ng-click="showAll = true">Show All
+                </button>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <iframe ng-src="{{ iframe_url }}"></iframe>
+        </div>
+    </div>
+</div>

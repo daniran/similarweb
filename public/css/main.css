@@ -1,0 +1,36 @@
+body {
+  font: 17px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+#navigation-container .input-group {
+  margin: 0px 0 10px 0;
+}
+#navigation-container .alert {
+  cursor: pointer;
+}
+#navigation-container .alert small {
+  float: right;
+  font-size: 70%;
+  line-height: 1.6em;
+}
+#navigation-container .alert-gray {
+  background-color: #ddd;
+}
+#result-container .similar-site-link {
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+}
+#result-container .similar-site-link img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+#result-container #show-all-link {
+  width: 100%;
+}
+#result-container iframe {
+  width: 100%;
+}

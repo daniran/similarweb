@@ -1,0 +1,51 @@
+doctype html
+html(lang='en', ng-app='similarweb')
+head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Bootstrap 101 Template
+
+    // bootstrap
+    link(href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', rel='stylesheet')
+    link(href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css', rel='stylesheet')
+
+    link(href='css/main.css', rel='stylesheet')
+body(ng-controller='MainController')
+    // jquery
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js')
+    // bootstrap
+    script(src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js')
+    // angular
+    script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js')
+    script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.js')
+    script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.js')
+    script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-sanitize.js')
+    // app
+    script(src='js/app.js')
+    script(src='js/controllers.js')
+    script(src='js/directives.js')
+    script(src='js/filters.js')
+    script(src='js/services.js')
+
+    .container-fluid
+        .row
+            #navigation-container.col-md-4
+                .page-header.panel
+                    .input-group
+                        span.input-group-btn
+                            button.btn.btn-default(type='button', ng-click='search()') Search
+                        input.form-control(type='text', ng-model='searchQ', placeholder='Enter URL', required='true')
+                .panel.panel-default
+                    .panel-heading
+                        h3.panel-title Search History
+                    .panel-body
+                        history
+            #result-container.col-md-8
+                .page-header.well
+                    result-header
+                .panel.panel-default
+                    .panel-heading
+                        h3.panel-title Search results
+                    .panel-body
+                        result

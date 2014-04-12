@@ -1,0 +1,6 @@
+<div ng-repeat="item in all_history | orderBy:'-time'">
+    <div class="alert alert-gray alert-dismissable" ng-click="showResults(item, $event)" ng-class="item.url == searchQ ? 'alert-info' : ''">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true" ng-click='deleteItem(item, $event)'>&times;</button>
+        {{ item.url }} <small>{{ item.time  | date:'short' }}</small>
+    </div>
+</div>

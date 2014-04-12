@@ -1,0 +1,11 @@
+<div ng-if="siteData == null">
+    <h3>Start by searching for a URL</h3>
+</div>
+
+<div ng-if="siteData != null">
+    <div><h3>{{ siteData.Title }}</h3>
+        <small><a ng-href="http://{{ searchQ }}" target="_blank">{{ searchQ }}</a></small>
+    </div>
+    <small>Ranked <span class="badge">#{{ siteData.GlobalRank }}</span> globally, <span class="badge">#{{ siteData.CategoryRank }}</span> in category {{ siteData.Category | category }}
+    </small>
+</div>
