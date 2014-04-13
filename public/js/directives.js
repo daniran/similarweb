@@ -2,7 +2,6 @@
 
 /* Directives */
 
-
 var directives = angular.module('similarweb.directives', []);
 
 directives.directive('history', function() {
