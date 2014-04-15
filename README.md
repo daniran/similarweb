@@ -9,4 +9,11 @@ to get information about websites.
 
 It provides info on similar sites, and also renders the site in an iframe where possible.
 
+## Imlementation
 The application uses node.js as the backend, and angularJS + jQuery + bootstrap on the frontend
+
+## Demo
+
+A running demo can be seen here:
+
+http://similarweb.herokuapp.com/
