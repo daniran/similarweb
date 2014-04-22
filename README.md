@@ -9,6 +9,8 @@ to get information about websites.
 
 It provides info on similar sites, and also renders the site in an iframe where possible.
 
+![screenshot](https://raw.githubusercontent.com/daniran/similarweb/master/screenshot.png)
+
 ## Imlementation
 The application uses node.js as the backend, and angularJS + jQuery + bootstrap on the frontend.
 
